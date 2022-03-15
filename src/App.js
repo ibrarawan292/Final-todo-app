@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Form from './Components/Form';
 import {BrowserRouter, Routes, Route,} from "react-router-dom";
+import Details from './Components/Details';
 
 
 
@@ -16,8 +17,8 @@ function App() {
   <BrowserRouter>
    <Header/>
    <Routes>
-     
-     <Route path='/form' element= { <Form/>}></Route>
+     <Route path='/detail/:id' element={<Details/>}/>
+     <Route path='/form' element= { <Form/>}/>
    </Routes>
   
   </BrowserRouter>
