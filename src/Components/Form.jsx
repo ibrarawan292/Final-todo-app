@@ -1,14 +1,17 @@
 import React, { useState } from "react";
+import { todos } from "../Data/todos";
 import Todolist from "./Todolist";
+
 
 const Form = () => {
 
  const [title, setTitle] = useState('')
  const [desc, setDesc] = useState('')
+ 
 
- const [id, setId] = useState()
+//  const [id, setId] = useState()
 
- const [todo, setTodo] = useState([])
+ const [todo, setTodo] = useState(todos)
 
 
  const handletitle = (e) =>{
@@ -18,17 +21,17 @@ const Form = () => {
  const handledesc = (e) =>{
     setDesc(e.target.value)
  }
- const handleid = (e) =>{
-    setId(e.target.value)
- }
+//  const handleid = (e) =>{
+//     setId(e.target.value)
+//  }
 
  const handleSubmit = (e) => {
      e.preventDefault()
      
      const newItem = {
-         id: id,
         title: title,
-        desc: desc
+        desc: desc,
+        
     }
     setTodo([...todo, newItem])
 
@@ -44,7 +47,7 @@ const Form = () => {
         <div className="container ">
             <form className="w-50 mx-auto mt-5 mb-5" onSubmit={(event) => handleSubmit(event)}>
                 <div>
-                <input type="number" onChange={(event) => handleid(event)} class="form-control" id="description" />
+                {/* <input type="number" onChange={(event) => handleid(event)} class="form-control" id="description" /> */}
                 </div>
                 <div class="row mb-3">
                     <label htmlFor="title" class="col-sm-4 col-form-label">Title</label>

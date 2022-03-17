@@ -17,7 +17,7 @@ function App() {
   <BrowserRouter>
    <Header/>
    <Routes>
-     <Route path='/detail/:id' element={<Details/>}/>
+     <Route path='/detail/:title' element={<Details/>}/>
      <Route path='/form' element= { <Form/>}/>
    </Routes>
   
