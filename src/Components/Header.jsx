@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { todos } from "../Data/todos";
+
 
 const Header = () => {
+
+   
+
     return (
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,7 +29,9 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link disabled" to="/" tabIndex="-1" aria-disabled="true">Disabled</Link>
                             </li>
+                           
                         </ul>
+                        <h1>Total listItems: {todos.length}</h1>
                     </div>
                 </div>
             </nav>
